@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyzer
 {
-    internal class Mood
+    public class Mood
     {
+        private string message;
+
+        public Mood(string message)
+        {
+            this.message = message;
+        }
+
         public string check(string message)
         {
             if (message.Contains("i am sad"))
@@ -21,6 +28,11 @@ namespace MoodAnalyzer
                 return "happy";
             }
             return "i don't know";
+        }
+
+        public string check()
+        {
+            throw new NotImplementedException();
         }
     }
 }
